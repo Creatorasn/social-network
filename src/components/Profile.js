@@ -1,8 +1,10 @@
+import s from './Profile.module.css';
+
 const Profile = () => {
     return (
-        <div className="content">
+        <div className={s.content}>
             <div>
-                <img className='fon' src='https://lh3.googleusercontent.com/proxy/TssbcVP22-VPyUnoOpvrQMr5Hf-hWPfZPyrCvYdqNpgh4dRCPB35DROhfExkzc_sTCgfNbH-pRAEmdHCAOq5km_qx8y2fjriaGQPPjmi9u2SLaZX5AXo' />
+                <img className={s.fon} src='https://lh3.googleusercontent.com/proxy/TssbcVP22-VPyUnoOpvrQMr5Hf-hWPfZPyrCvYdqNpgh4dRCPB35DROhfExkzc_sTCgfNbH-pRAEmdHCAOq5km_qx8y2fjriaGQPPjmi9u2SLaZX5AXo' />
             </div>
             <div>ava + description</div>
             <div>My post</div>

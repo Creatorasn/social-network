@@ -12,32 +12,3 @@
   grid-template-columns: 2fr 10fr;
   grid-gap: 5px;
 }
-
-.header{
-  grid-area: header;
-  border: solid 1px #459eb0;
-}
-
-.header img {
-  height: 181px;
-}
-
-.nav{
-  padding: 5px;
-  grid-area: nav;
-  background-color:  #459eb0;
-}
-
-.nav a{
-  color: white;
-}
-
-.content{
-  grid-area: content;
-  border: solid 1px #459eb0;
-}
-
-img.fon{
-  display: block;
-  margin: 0 auto;
-}
