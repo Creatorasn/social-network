@@ -4,10 +4,11 @@
     background-color:  #459eb0;
   }
   
-  .item{
+  .item a{
     color: white;
+    text-decoration: none;
   }
 
-  .item.active{
+  .item a.active{
       margin-left: 10px;
   }
