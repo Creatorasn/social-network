@@ -13,7 +13,7 @@ const Message = (props) => {
     return <div className={s.message}>{props.message}</div>
 }
 
-let dialogsData = [
+let dialogs = [
     {id: 1, name: 'Squirrel'},
     {id: 2, name: 'Fox'},
     {id: 3, name: 'Tit'},
@@ -21,22 +21,23 @@ let dialogsData = [
     {id: 5, name: 'Phoenix'}
 ]
 
-let messagesData = [
+let messages = [
     {id: 1, message: 'When did the first scouts appear?'},
     {id: 2, message: 'The scout movement originated a long time ago and still exists.'},
     {id: 3, message: 'It was his basic organizational principles that were adopted by the pioneer organization.'}
 ]
 
+let dialogsElements = dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
+let messagesElements = messages.map( m => <Message message={m.message} />);
+
 const Dialogs = (props) => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItem}>
-                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
+                {dialogsElements}
             </div>
             <div className={s.messages}>
-                <Message message={messagesData[0].message} />
-                <Message message={messagesData[1].message} />
+                {messagesElements}
             </div>
         </div>
     )

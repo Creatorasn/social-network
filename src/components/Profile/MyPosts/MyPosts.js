@@ -1,11 +1,13 @@
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
-let postData = [
+let posts = [
     {id: 1, message: 'scout post Squirrel', likesCount: 0},
     {id: 2, message: 'scout post Fox', likesCount: 10},
     {id: 3, message: 'scout post Tit', likesCount: 20}
 ]
+
+let postsElements = posts.map( p => <Post message={p.message} likesCount={p.likesCount} />);
 
 const MyPosts = () => {
     return (
@@ -15,9 +17,7 @@ const MyPosts = () => {
                 <textarea></textarea>
                 <button>Add post</button>
             </div>
-            <Post message={postData[0].message} likesCount={postData[0].likesCount} />
-            <Post message={postData[1].message} likesCount={postData[1].likesCount} />
-            <Post message={postData[2].message} likesCount={postData[2].likesCount} />
+            {postsElements}
         </div>
     );
 }
