@@ -9,16 +9,6 @@
     background-color: rgb(247, 245, 243);
 }
 
-.dialog a{
-    text-decoration: none;
-    color: #459eb0;
-    padding-left: 10px;
-}
-
 .messages {
     padding: 5px;
-}
-
-.message {
-    padding-left: 10px;
 }
