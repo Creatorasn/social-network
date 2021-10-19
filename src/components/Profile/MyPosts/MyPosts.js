@@ -10,13 +10,14 @@ const MyPosts = (props) => {
     
     let addPost = () => {
         let text = newPostElement.current.value;
-        alert(text);
+        props.addPost(text);
+        newPostElement.current.value = '';
     }
 
     return (
         <div>
             <h3>My post</h3>
-            <div>
+            <div className={s.addPost}>
                 <div>
                     <textarea ref={newPostElement}></textarea>
                 </div>
