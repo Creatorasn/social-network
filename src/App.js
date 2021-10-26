@@ -7,6 +7,7 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import { Route } from 'react-router';
+import { updateNewMessageText } from './redux/state';
 
 const App = (props) => {
   return (
@@ -16,7 +17,8 @@ const App = (props) => {
       <div className='app-wrapper-content'>
         <Route path='/profile' render={ () => <Profile profilePage={props.state.profilePage} 
         addPost={props.addPost} updateNewPostText={props.updateNewPostText} />} />
-        <Route path='/dialogs' render={ () => <Dialogs dialogsPage={props.state.dialogsPage} />} />
+        <Route path='/dialogs' render={ () => <Dialogs dialogsPage={props.state.dialogsPage} 
+        addMessage={props.addMessage} updateNewMessageText={props.updateNewMessageText} />} />
         <Route path='/news' render={ () => <News />} />
         <Route path='/music' render={ () => <Music />} />
         <Route path='/settings' render={ () => <Settings />} />
