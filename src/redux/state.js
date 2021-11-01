@@ -26,10 +26,15 @@ let store = {
         }
       },
     _callSubscriber() {},
+    
     getState() {
         return this._state;
     },
-    addPost() {
+    subscribe(observer) {
+        this._callSubscriber = observer;
+    },
+
+    _addPost() {
         let newPost = {
             id: 5,
             message: this._state.profilePage.newPostText,
@@ -40,11 +45,11 @@ let store = {
         this._state.profilePage.newPostText = '';
         this._callSubscriber(this._state);
     },
-    updateNewPostText(newText) {
+    _updateNewPostText(newText) {
         this._state.profilePage.newPostText = newText;
         this._callSubscriber(this._state);
     },
-    addMessage() {
+    _addMessage() {
         let newMessage = {
             id: 4,
             message: this._state.dialogsPage.newMessageText
@@ -54,12 +59,21 @@ let store = {
         this._state.dialogsPage.newMessageText = '';
         this._callSubscriber(this._state);
     },
-    updateNewMessageText(newText) {
+    _updateNewMessageText(newText) {
         this._state.dialogsPage.newMessageText = newText;
         this._callSubscriber(this._state);
     },
-    subscribe(observer) {
-        this._callSubscriber = observer;
+
+    dispatch(action) {
+        if(action.type === 'ADD-POST') {
+            this._addPost();
+        } else if(action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._updateNewPostText(action.newText);
+        } else if(action.type === 'ADD-MESSAGE') {
+            this._addMessage();
+        } else if(action.type === 'UPDATE-NEW-MESSAGE-TEXT') {
+            this._updateNewMessageText(action.newText);
+        }
     }
 }
 
