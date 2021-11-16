@@ -2,3 +2,12 @@
     width: 100px;
     height: 120px;
 }
+
+.pageNumber{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.selectedPage{
+    font-weight: bold;
+}
