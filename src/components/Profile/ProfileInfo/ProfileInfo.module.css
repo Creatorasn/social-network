@@ -1,6 +1,43 @@
 img.fon{
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-    height: 200px;
-  }
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  height: 200px;
+}
+
+.profile{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin-top: 30px;
+}
+
+.aboutMe, .lookingForAJob{
+  color: #459eb0;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.fullName{
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+.lookingForAJobDescription{
+  margin-left: 20px;
+}
+
+.contacts{
+  margin-top: 18px;
+  text-transform: uppercase;
+}
+
+.contactsItems{
+  margin-top: 3px;
+  margin-left: 20px;
+}
+
+.items{
+  color: #459eb0;
+}
